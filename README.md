@@ -1,5 +1,5 @@
 # YouTube Shorts Fixer Chrome Extension
-![YSF Logo Icon](https://github.com/[YassineGherbi]/[youtube-shorts-fixer-chrome-extension]/blob/main/public/icons/icon1024.png?raw=true)
+![YSF Logo Icon](https://github.com/YassineGherbi/youtube-shorts-fixer-chrome-extension/blob/main/public/icons/icon1024.png?raw=true)
 
 ## Overview
 
