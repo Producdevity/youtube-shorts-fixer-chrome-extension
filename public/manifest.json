@@ -21,7 +21,7 @@
         "*://www.youtube.com/*",
         "*://www.youtube.com/shorts/*"
       ],
-      "js": ["background.js"]
+      "js": ["src/background.ts"]
     }
   ]
 }
