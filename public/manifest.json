@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Fixer",
+  "description": "Add a seek bar to YouTube Shorts on desktop",
+  "version": "0.0.1",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png",
+      "1024": "icons/icon1024.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*",
+        "*://www.youtube.com/*",
+        "*://www.youtube.com/shorts/*"
+      ],
+      "js": ["background.js"]
+    }
+  ]
+}

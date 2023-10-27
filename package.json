@@ -1,0 +1,31 @@
+{
+  "name": "youtube-shorts-fixer",
+  "description": "A Chrome extension to fix the YouTube Shorts player",
+  "author": "Yassine Gherbi <yassine@hexelnet.com>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "repository": "YassineGherbi/youtube-shorts-fixer-chrome-extension",
+  "homepage": "https://github.com/YassineGherbi/youtube-shorts-fixer-chrome-extension#readme",
+  "keywords": [
+    "youtube",
+    "shorts",
+    "chrome",
+    "extension"
+  ],
+  "devDependencies": {
+    "@nabla/vite-plugin-eslint": "^1.5.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
