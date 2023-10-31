@@ -6,8 +6,12 @@ type State = {
   barUpdateFunction: ReturnType<typeof setInterval> | null
 }
 
+type SetStateAction =
+  | Partial<State>
+  | ((prevState: Readonly<State>) => Partial<State>)
+
 class Store {
-  private state: State = {
+  private readonly initialState: State = {
     video: null,
     videoBlob: null,
     videoHeight: null,
@@ -15,20 +19,19 @@ class Store {
     barUpdateFunction: null,
   }
 
-  resetState = () =>
-    this.setState({
-      video: null,
-      videoBlob: null,
-      videoHeight: null,
-      videoWidth: null,
-      barUpdateFunction: null,
-    })
+  private state: State = { ...this.initialState }
+
+  resetState = (): State => this.setState({ ...this.initialState })
 
   getState = (): State => this.state
 
-  setState = (partialState: Partial<State>) => {
-    this.state = { ...this.state, ...partialState }
-  }
+  setState = (newStateOrUpdater: SetStateAction): State =>
+    (this.state = {
+      ...this.state,
+      ...(typeof newStateOrUpdater === 'function'
+        ? newStateOrUpdater(this.state)
+        : newStateOrUpdater),
+    })
 }
 
 const store = new Store()
